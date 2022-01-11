@@ -31,6 +31,19 @@ export default defineConfig({
         'src/components',
         'src/pages',
       ],
+      resolvers: [
+        (name) => {
+          if (name.includes('IconSolid')) {
+            const realName = name.split('Solid')[0]
+            return { importName: 'default', path: `@heroicons/vue/solid/esm/${realName}.js` }
+          }
+          if (name.includes('IconOutline')) {
+            const realName = name.split('Outline')[0]
+            return { importName: 'default', path: `@heroicons/vue/outline/esm/${realName}.js` }
+          }
+        },
+      ],
+
       include: [/\.vue$/, /\.vue\?vue/],
       extensions: ['vue'],
 
