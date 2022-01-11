@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import { useMainStore } from '@/store/mainStore'
 import { ref } from 'vue'
 
 defineProps<{ msg: string }>()
-
+const store = useMainStore()
+const {  getIsLoading } = store
 const count = ref(0)
 </script>
 
