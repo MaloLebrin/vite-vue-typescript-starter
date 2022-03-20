@@ -40,6 +40,7 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
+        'pinia',
         {
           ...Object.keys(composablePaths).reduce((acc, name) => ({
             ...acc,
