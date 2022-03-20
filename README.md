@@ -1,6 +1,6 @@
 # Vue 3 - Vite Starter
 
-This is a starter project for [Vue Js](https://vuejs.org/) powered by [Vite](https://vitejs.dev/).
+This is a starter project for [Vue Ts](https://vuejs.org/) powered by [Vite](https://vitejs.dev/).
 
 The project is helpful to start your next project, as it provides a lot of the common tools you may reach for, all ready to go.
 
