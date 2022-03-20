@@ -1,11 +1,50 @@
-# Vue 3 + Typescript + Vite
+# Vue 3 - Vite Starter
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a starter project for [Vue Js](https://vuejs.org/).
 
-## Recommended IDE Setup
+The project is helpful to start your next project, as it provides a lot of the common tools you may reach for, all ready to go.
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+### Features
 
-## Type Support For `.vue` Imports in TS
+- TypeScript Included.
+- [Vite Plugin AutoImport](https://github.com/antfu/unplugin-auto-import).
+- [Vite Plugin Svg-sprite-component](https://github.com/cereschen/vite-plugin-svg-sprite-component.git).
+- [Vue Router](https://router.vuejs.org/) Included Auto Imported.
+- [Pinia](https://pinia.vuejs.org/) Included Auto Imported.
+- [Tailwindcss](https://tailwindcss.com/) Included.
+- [HeadlessUi](https://headlessui.dev/) Included Auto Imported.
+- Composables folder Auto Imported
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+### Directory Structure
+
+| Name                              | Description |
+| --------------------------------- | ----------- |
+| **dist/**                        | Compiled source files will be placed here. |
+| **public/**                       | Static assets (fonts, css, js, img). |
+| **src/**                          | Source files. |
+| **src/components**                | Vue components including shared (common) components. |
+| **src/layouts**                   | Dynamic Layout Components. |
+| **src/pages**                     | Views - screen components. |
+| **src/routes**                    | Application routes. |
+| **src/store**                     | Pinia states management. |
+| **src/composables**               | Files to encapsulate and reuse logic.|
+| **src/types**                     | Types of all you project.|
+
+### Installation
+
+- Clone the repo - `git clone https://github.com/MaloLebrin/vite-vue-typescript-starter.git`.
+- Install project dependencies — `pnpm install`.
+- Create `.env` file - `cp .env.example .env`.
+- Launch the app — `pnpm run dev`, it will become available at [http://localhost:3000](http://localhost:3000/).
+
+### Available Scripts
+
+- `dev`
+- `build`
+- `preview`
+
+### License
+
+[MIT](LICENSE).
+
+---
