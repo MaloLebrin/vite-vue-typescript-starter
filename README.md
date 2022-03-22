@@ -13,6 +13,7 @@ The project is helpful to start your next project, as it provides a lot of the c
 - [Pinia](https://pinia.vuejs.org/) Included Auto Imported.
 - [Tailwindcss](https://tailwindcss.com/) Included.
 - [HeadlessUi](https://headlessui.dev/) Included Auto Imported.
+- [Heroicons](https://heroicons.com/) Included Auto Imported.
 - Composables folder Auto Imported
 
 ### Directory Structure
