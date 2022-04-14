@@ -4,8 +4,8 @@ export const useMainStore = defineStore('main', {
     isLoading: false,
   }),
   getters: {
-    getIsLoggedIn: (state) => state.isLoggedIn,
-    getIsLoading: (state) => state.isLoading,
+    getIsLoggedIn: state => state.isLoggedIn,
+    getIsLoading: state => state.isLoading,
   },
   actions: {
     setIsLoggedIn() {

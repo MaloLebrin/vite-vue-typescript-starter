@@ -1,7 +1,7 @@
 <template>
-  <main class="w-full">
-    <router-view />
-  </main>
+<main class="w-full">
+  <router-view />
+</main>
 </template>
 
 <script lang="ts">

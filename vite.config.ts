@@ -1,13 +1,13 @@
+import fs from 'fs'
+import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import path from 'path'
-import Pages from "vite-plugin-pages"
+import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { HeadlessUiResolver } from 'unplugin-vue-components/resolvers'
 import svgSpritePlugin from 'vite-plugin-svg-sprite-component'
-import fs from 'fs'
 
 const getFileNames = (dir: string) => fs.readdirSync(dir)
   .map(file => {
@@ -49,15 +49,15 @@ export default defineConfig({
             ],
           }), {}),
           ...Object.keys(storePaths).reduce((acc, name) => {
-            const hookName = `use${name[0].toUpperCase()}${name.substring(1)}`
+            const storeName = `use${name[0].toUpperCase()}${name.substring(1)}`
             return {
               ...acc,
               [storePaths[name].replace('./src/', '@/')]: [
-                [hookName, hookName],
+                [storeName, storeName],
               ],
             }
           }, {}),
-        }
+        },
       ],
     }),
     vue(),
@@ -72,7 +72,7 @@ export default defineConfig({
       ],
       resolvers: [
         HeadlessUiResolver({}),
-        (name) => {
+        name => {
           if (name.includes('IconSolid')) {
             const realName = name.split('Solid')[0]
             return { importName: 'default', path: `@heroicons/vue/solid/esm/${realName}.js` }
@@ -95,7 +95,7 @@ export default defineConfig({
       },
     }),
     Layouts({
-      defaultLayout: 'DefaultLayout'
+      defaultLayout: 'DefaultLayout',
     }),
   ],
   resolve: {
