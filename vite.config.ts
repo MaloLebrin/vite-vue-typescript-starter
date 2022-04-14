@@ -8,6 +8,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { HeadlessUiResolver } from 'unplugin-vue-components/resolvers'
 import svgSpritePlugin from 'vite-plugin-svg-sprite-component'
+import Checker from 'vite-plugin-checker'
 
 const getFileNames = (dir: string) => fs.readdirSync(dir)
   .map(file => {
@@ -96,6 +97,13 @@ export default defineConfig({
     }),
     Layouts({
       defaultLayout: 'DefaultLayout',
+    }),
+    Checker({
+      typescript: true,
+      vueTsc: true,
+      eslint: {
+        lintCommand: 'lint',
+      },
     }),
   ],
   resolve: {
