@@ -2,6 +2,12 @@
   "name": "vite-vue-typescript-starter",
   "version": "0.0.1",
   "license": "MIT",
+  "private": "false",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/@malolebrin"
+  },
+  "packageManager": "pnpm@7.11.0",
   "scripts": {
     "dev": "vite",
     "lint": "eslint .",
