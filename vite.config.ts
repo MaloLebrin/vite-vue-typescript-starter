@@ -8,7 +8,6 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { HeadlessUiResolver } from 'unplugin-vue-components/resolvers'
 import svgSpritePlugin from 'vite-plugin-svg-sprite-component'
-import Checker from 'vite-plugin-checker'
 
 const getFileNames = (dir: string) => fs.readdirSync(dir)
   .map(file => {
@@ -76,11 +75,11 @@ export default defineConfig({
         name => {
           if (name.includes('IconSolid')) {
             const realName = name.split('Solid')[0]
-            return { importName: 'default', path: `@heroicons/vue/solid/esm/${realName}.js` }
+            return { importName: 'default', path: `@heroicons/vue/24/solid/esm/${realName}.js` }
           }
           if (name.includes('IconOutline')) {
             const realName = name.split('Outline')[0]
-            return { importName: 'default', path: `@heroicons/vue/outline/esm/${realName}.js` }
+            return { importName: 'default', path: `@heroicons/vue/24/solid/esm/${realName}.js` }
           }
         },
       ],
@@ -97,13 +96,6 @@ export default defineConfig({
     }),
     Layouts({
       defaultLayout: 'DefaultLayout',
-    }),
-    Checker({
-      typescript: true,
-      vueTsc: true,
-      eslint: {
-        lintCommand: 'lint',
-      },
     }),
   ],
   resolve: {
