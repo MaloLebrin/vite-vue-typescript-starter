@@ -57,6 +57,7 @@ declare global {
   const useAttrs: typeof import('vue')['useAttrs']
   const useComposable: typeof import('@/composables/useComposable')['default']
   const useCssModule: typeof import('vue')['useCssModule']
+  const useCssVars: typeof import('vue')['useCssVars']
   const useMainStore: typeof import('@/store/mainStore')['useMainStore']
   const useRoute: typeof import('vue-router')['useRoute']
   const useRouter: typeof import('vue-router')['useRouter']
