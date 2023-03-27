@@ -7,7 +7,7 @@
     "access": "public",
     "registry": "https://npm.pkg.github.com/@malolebrin"
   },
-  "packageManager": "pnpm@7.29.0",
+  "packageManager": "pnpm@7.30.5",
   "scripts": {
     "dev": "vite",
     "lint": "eslint .",
